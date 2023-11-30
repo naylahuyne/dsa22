@@ -1,0 +1,16 @@
+Có bao nhiêu đồ thị vô hướng khác nhau có V đỉnh và E cạnh (không có cạnh song
+song)?
+
+Nếu đồ thị không có khuyên:
+Trong V đỉnh, có p = (V choose 2) cặp đỉnh                //tổ hợp chập 2 của V.
+Nếu E > p, số đồ thị = 0.
+Nếu 0 <= E <= p,
+Từ p cặp đỉnh, chọn ra E cặp -> Số đồ thị = (p choose E)  //tổ hợp chập E của p.
+
+Nếu đồ thị có khuyên:
+Trong V đỉnh, có p = (V choose 2) + V cặp đỉnh            //tính cả 1 đỉnh cặp với chính nó
+Nếu E > p, số đồ thị = 0.
+Nếu 0 <= E <= p,
+Từ p cặp đỉnh, chọn ra E cặp -> Số đồ thị = (p choose E)  //tổ hợp chập E của p.
+
+

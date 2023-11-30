@@ -1,0 +1,52 @@
+Chứng minh rằng một đồ thị là đồ thị hai màu (bipartite) khi và chỉ khi nó không chứa
+chu trình độ dài lẻ.
+
+* Chiều thuận: Nếu một đồ thị là đồ thị hai màu thì nó không chứa chu trình độ dài lẻ.
+
+Giả sử G là một đồ thị hai màu và G có chu trình độ dài lẻ là H.
+
++ Nếu chu trình H có độ dài >= 3.
+Ký hiệu các đỉnh của H (theo 1 chiều) lần lượt là 1, 2, 3, ..., 2n + 1.
+Nếu đỉnh k trong H được tô màu đỏ thì đỉnh k + 1 được tô màu xanh, và ngược lại.
+(Với quy ước đỉnh (2n + 1) + 1 là đỉnh 1)
+Như vậy, các đỉnh chẵn được tô bởi cùng một màu (xanh hoặc đỏ) và các đỉnh lẻ được tô bởi màu còn lại.
+-> đỉnh 1 và (2n + 1) được tô bởi cùng màu một màu.
+Tuy nhiên, đỉnh 1 và (2n + 1) kề nhau.
+-> G không phải đồ thị hai màu.
+
++ Nếu H là khuyên (chu trình độ dài 1). 
+Hiển nhiên, đỉnh duy nhất của H cùng màu với chính nó 
+-> G không phải đồ thị hai màu.
+
+Tóm lại, nếu H là chu trình lẻ độ dài bất kỳ thì G không phải đồ thị hai màu.
+-> Mâu thuẫn với giả thiết G là đồ thị hai màu.
+-> Điều giả sử là sai.
+-> Nếu một đồ thị là đồ thị hai màu thì nó không chứa chu trình độ dài lẻ.
+
+* Chiều đảo: Một đồ thị không chứa chu trình độ dài lẻ thì nó là đồ thị màu.
+
+(1) Xét G là một đồ thị liên thông không chứa chu trình độ dài lẻ, tức là nếu G có chu trình thì chu trình có độ dài chẵn.
+Chọn một đỉnh bất kỳ thuộc G và ký hiệu đỉnh đó là đỉnh 0 và tô màu đỏ.
+Với mỗi đỉnh v khác đỉnh 0 của G, 
++ Nếu d(0, v) là lẻ, tô đỉnh v màu xanh.
++ Nếu d(0, v) là chẵn, tô đỉnh v màu đỏ.
+(Kí hiệu d(u, v) là khoảng cách giữa hai đỉnh thuộc đồ thị)
+(Khoảng cách giữa hai đỉnh là số cạnh của đường đi ngắn nhất giữa hai đỉnh đó)
+(Vì đang xét G liên thông nên luôn tồn tại đường đi từ đỉnh 0 đến một đỉnh bất kỳ của đồ thị)
+
+Giả sử tồn tại hai đỉnh kề nhau u, v thuộc G sao cho u, v cùng màu.
+Vì u, v cùng màu nên d(0, u) và d(0, v) cùng chẵn hoặc cùng lẻ.
+-> d(0, u) + d(0, v) là chẵn
+-> chu trình bao gồm đường đi ngắn nhất giữa 0, u và đường đi ngắn nhất giữa 0, v và cạnh (u, v)
+có độ dài d(0, u) + d(0, v) + 1 là số lẻ.
+-> Tồn tại chu trình độ dài lẻ trong G.
+-> Giả sử u, v cùng màu là sai.
+-> Không tồn tại hai đỉnh kề nhau u, v thuộc G để u, v cùng màu
+-> Nếu G là đồ thị liên thông không chứa chu trình độ dài lẻ thì nó là đồ thị màu.
+
+(2) Nếu G là đồ thị gồm nhiều thành phần liên thông.
+Với mỗi thành phần liên thông của G, lập luận tương tự như (1).
+-> Nếu G không chứa chu trình độ dài lẻ thì nó là đồ thị màu.
+
+Tóm lại, một đồ thị là đồ thị hai màu (bipartite) khi và chỉ khi nó không chứa
+chu trình độ dài lẻ.

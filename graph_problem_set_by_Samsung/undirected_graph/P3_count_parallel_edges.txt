@@ -1,0 +1,9 @@
+Bước 1: Nhập vào số đỉnh(V), số cạnh(E), danh sách cạnh của đồ thị.
+Bước 2: Tạo mảng boolean cỡ VxV, tạo biến đếm số cạnh song song.
+Bước 3: Với mỗi cạnh (i, j) trong danh sách cạnh:
+	Kiểm tra xem đã có cạnh nào khác nối (i, j) chưa bằng cách kiểm tra giá trị ô (i, j) của mảng bool.
+	+ Nếu đã có cạnh nối (i, j), tăng biến đếm số cạnh song song thêm 1.
+	+ Nếu chưa, thay đổi giá trị ô (i, j) của mảng thành trạng thái đã có cạnh nối (i, j)
+Bước 4: Trả về kết quả biến đếm số cạnh song song.
+ 
+

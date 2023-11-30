@@ -1,0 +1,21 @@
+Một đồ thị được gọi là biconnected nếu mỗi cặp đỉnh đều được nối với nhau bởi hai
+đường đi không giao nhau. Trong đồ thị liên thông, điểm articulation là đỉnh mà khi xóa
+nó và các cạnh kề sẽ làm đồ thị mất tính liên thông. Hãy chứng minh rằng một đồ thị bất
+kì mà không có điểm articulation là đồ thị biconnected.
+
+Chứng minh:
+Xét cặp đỉnh s và t và một đường đi nối giữa chúng.
+
+* TH1: đường đi là cạnh nối s và t. Gọi cạnh đó là e.
+Xóa cạnh e, do s và t không phải điểm articulation (đồ thị không có điểm articulation) nên đồ thị vẫn liên thông. Do đồ thị liên thông nên tồn tại một đường đi khác giữa s và t. Hơn nữa, đường đi đó không giao với cạnh e.
+	-> Tồn tại hai đường đi không giao nhau giữa s và t.
+
+* TH2: đường đi không phải cạnh nối s và t.
+Giả sử đường đi đó là s v1 v2 v3 v4 ... vk t.
+Ta xóa các đỉnh v1, v2, ..., vk và các cạnh kề của từng đỉnh.
+Vì các đỉnh đó không phải điểm articulation nên đồ thị vẫn là đồ thị liên thông.
+-> tồn tại một đường đi khác giữa s và t.
+Hơn nữa, đường đi đó không đi qua các đỉnh v1, v2, ..., vk, tức là không giao với đường đi được xét ban đầu.
+-> Tồn tại hai đường đi không giao nhau giữa s và t.
+
+Vậy một đồ thị bất kì mà không có điểm articulation là đồ thị biconnected.

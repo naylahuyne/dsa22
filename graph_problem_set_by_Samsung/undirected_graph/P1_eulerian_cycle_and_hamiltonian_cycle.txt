@@ -1,0 +1,41 @@
+* Đồ thị có chu trình Euler khi và chỉ khi bậc của các đỉnh đều chẵn.
+(Mỗi khi đi vào 1 đỉnh từ 1 cạnh thì cần 1 cạnh khác để đi ra đỉnh ấy, 
+tức là mỗi lần như thế bậc của đỉnh tăng thêm 2)
+
+a/
+0-1 0-2 0-3 1-3 1-4 2-5 2-9 3-6 4-7 4-8 5-8 5-9 6-7 6-9 7-8
+Bậc của đỉnh 5 là 3 (3 cạnh 2-5, 5-8, 5-9) -> Đồ thị không có chu trình Euler.
+
+Đồ thị có chu trình Hamilton, ví dụ:
+2 - 5 - 8 - 7 - 4 - 1 - 0 - 3 - 6 - 9 - 2
+b/
+0-1 0-2 0-3 1-3 0-3 2-5 5-6 3-6 4-7 4-8 5-8 5-9 6-7 6-9 8-8
+Bậc của các đỉnh đều chẵn
+-> Đồ thị có chu trình Euler, ví dụ: 
+0 - 1 - 3 - 6 - 7 - 4 - 8 - 8 - 5 - 9 - 6 - 5 - 2 - 0 - 3 - 0
+
+Xét chu trình con:
+
+---- 5 --- 8 
+   /	     \  
+  9           4
+  \          /
+---6 ------ 7
+Để đi vào và đi ra đỉnh số 4 cần đi qua đỉnh 5 và 6.
+Để đi vào và đi ra đỉnh số 9 cần đi qua đỉnh 5 và 6.
+Như vậy để đi qua đỉnh 4 và 9 thì cần đi theo chu trình 4 - 8 - 5 - 9 - 6 - 7 - 4.
+Tuy nhiên đi như vậy thì các đỉnh 5 và 6 đều đã dùng.
+-> Không đi được đến tất cả các đỉnh của đồ thị mỗi đỉnh đi 1 lần.
+-> Đồ thị không có chu trình Hamilton.
+c/
+0-1 1-2 1-3 0-3 0-4 2-5 2-9 3-6 4-7 4-8 5-8 5-9 6-7 6-9 7-8
+Bậc của đỉnh 0 là 3 (3 cạnh 0-1, 0-3, 0-4) -> Đồ thị không có chu trình Euler.
+
+Đồ thị có chu trình Hamilton, ví dụ:
+9 - 2 - 1 - 0 - 3 - 6 - 7 - 4 - 8 - 5 - 9
+d/
+4-1 7-9 6-2 7-3 5-0 0-2 0-8 1-6 3-9 6-3 2-8 1-5 9-8 4-5 4-7
+Bậc của đỉnh 0 là 3 (3 cạnh 5-0, 0-2, 0-8) -> Đồ thị không có chu trình Euler.
+
+Đồ thị có chu trình Hamilton, ví dụ:
+7 - 4 - 1 - 5 - 0 - 8 - 2 - 6 - 3 - 9 - 7
