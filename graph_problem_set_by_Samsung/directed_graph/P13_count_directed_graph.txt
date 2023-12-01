@@ -1,0 +1,14 @@
+Chứng minh rằng có tất cả 2^(V^2) đồ thị V đỉnh có hướng không chứa cạnh song song.
+
+
+
+Trong V đỉnh, có (V choose 2) = V(V-1)/2 cặp đỉnh (không tính cặp với chính nó)
+Với mỗi cặp đỉnh (u, v) trong V(V-1)/2 cặp đỉnh trên có 2 cách xây cạnh u -> v hoặc v -> u.
+Vậy có V(V-1) cách xây cạnh.
+Hơn nữa các đỉnh có cạnh với chính nó (khuyên), có V(V-1) + V = V^2 cách xây cạnh.
+
+Nếu đồ thị có E cạnh và 0 <= E <= V^2 thì số đồ thị là (V^2 choose E).
+Theo định lý nhị thức và trong công thức trên cho E chạy từ 0 đến V^2:
+(V^2 choose 0) + (V^2 choose 1) + (V^2 choose 2) + ... + (V^2 choose V^2) = 2^(V^2)
+
+Vậy có tất cả 2^(V^2) đồ thị V đỉnh có hướng không chứa cạnh song song.
